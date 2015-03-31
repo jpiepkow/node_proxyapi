@@ -1,0 +1,35 @@
+<div class=" text-left">
+
+
+
+    <table class="table table-bordered  " ng-repeat="result in info.results">
+        <tr>
+            <td>
+                User Id:<a href="detail">{{result.user_id   }}</a>
+                <p >First Name:{{result.first_name  }}</p>
+                <p >Last Name:{{result.last_name   }}</p>
+                <p >Email Address:{{result.email_address   }}</p>
+                <p >Date Started:{{result.date_started   }}</p>
+
+
+
+
+            </td>
+            <td ng-repeat="ar in result.assessment_results">
+                <h5 >Title:{{ar.title  }}</h5>
+                <h5 >Code:{{ar.code  }}</h5>
+                <h5 >Is complete:{{ar.is_complete   }}</h5>
+                <h5 >Attempt #:{{ar.attempt_number  }}</h5>
+                <h5 >Percentage:{{ar.percentage  }}</h5>
+                <h5 >Readiness :{{ar.readiness  }}</h5>
+                <h5 >Date completed:{{ar.date_completed  }}</h5>
+
+            </td>
+
+        </tr>
+
+
+
+
+    </table>
+</div>
