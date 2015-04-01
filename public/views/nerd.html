@@ -1,5 +1,38 @@
 <div class="jumbotron text-center">
-	<h1></h1>
+	<p>ID#:{{info.user_id}}</p>
+    <p>{{info.first_name}} {{info.last_name}}</p>
+
+    <p>{{info.email_address}}</p>
+
+    <hr>
+    <div class="container">
+
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Title</th>
+                <th>code</th>
+                <th>is complete</th>
+                <th>attempt number</th>
+                <th>percentage</th>
+                <th>readiness</th>
+                <th>date completed</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="success" ng-repeat="ar in info.assessment_results | filter:{state:'!!'}">
+                <td>{{ar.title}}</td>
+                <td>{{ar.code}}</td>
+                <td>{{ar.is_complete}}</td>
+                <td>{{ar.attempt_number}}</td>
+                <td>{{ar.percentage}}</td>
+                <td>{{ar.readiness}}</td>
+                <td>{{ar.date_completed}}</td>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
 
 
 </div>

@@ -5,7 +5,7 @@
     <table class="table table-bordered  " ng-repeat="result in info.results">
         <tr>
             <td>
-                User Id:<a href="detail">{{result.user_id   }}</a>
+                User Id:<a href="detail" ng-click="getFunction(result.user_id)">{{result.user_id   }}</a>
                 <p >First Name:{{result.first_name  }}</p>
                 <p >Last Name:{{result.last_name   }}</p>
                 <p >Email Address:{{result.email_address   }}</p>
